@@ -46,11 +46,22 @@ public class NoteServlet extends HttpServlet
             throws ServletException, IOException 
     {
         
+        String title = request.getParameter("title");
+        String contents = request.getParameter("contents");
         
+        String path = getServletContext().getRealPath("/WEB-INF/note.txt");
+      
+            
+        PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(path, false))); 
+
+        pw.println(title);
+        pw.println(contents);
         
+        pw.close();
         
+        response.sendRedirect("note");
         
-      this.getServletContext().getRequestDispatcher("/WEB-INF/editnote.jsp").forward(request, response);
+      
     }
 
    
