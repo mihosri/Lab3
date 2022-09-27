@@ -12,22 +12,21 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>View Note</h1>
-        <form>
+        
+        <h1>Simple Note Keeper</h1>
+        <h2>View Note</h2>
+        
             <p>
-                <label> Title:
-                <input type="text">
-            </label>
+                <strong>Title</strong>
+                ${note.title}
             </p>
+            
             <p>
-                <label for="contents">Contents:
-                <textarea id="contents"></textarea>
-                </label>
+                <strong>Contents:</strong><br>
+                ${note.contents}
             </p>
-            <p>
-                <button type="submit">
-                    Submit
-                </button>
-            </p>
+            
+            <a href="note?edit">Edit</a>
+         
     </body>
 </html>

@@ -12,6 +12,24 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+      <h1>Simple Note Keeper</h1>
+        <h2>Edit Note</h2>
+        <form>
+            <p>
+                <label> 
+                    Title:
+                    <input type="text">
+                </label> 
+            </p>
+            
+            <p>
+                <label for="contents">Contents:</label>
+                <textarea id="contents"> </textarea>
+            </p>
+            
+            <button type="submit">Save</button>
+            
+        </form>
+            
     </body>
 </html>
