@@ -26,8 +26,18 @@ public class NoteServlet extends HttpServlet
         
         request.setAttribute("note", note);
         
+        String edit = request.getParameter("edit");
         
-        this.getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp").forward(request, response);
+        if(edit != null)
+        {
+            this.getServletContext().getRequestDispatcher("/WEB-INF/editnote.jsp").forward(request, response);
+        }
+        else
+        {
+            this.getServletContext().getRequestDispatcher("/WEB-INF/viewnote.jsp").forward(request, response);
+        }
+        
+        
     }
 
     
